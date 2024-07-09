@@ -1,0 +1,94 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import LinkendInIcon from "../components/icons/LinkedIn.astro";
+import SocialPill from "../components/SocialPill.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import BriefcaseIcon from "../components/icons/Briefcase.astro";
+import CodeIcon from "../components/icons/Code.astro";
+import Projects from "../components/Projects.astro";
+import ProfileCheck from "../components/icons/ProfileCheck.astro";
+import AboutMe from "../components/AboutMe.astro";
+---
+
+<Layout title="Porfolio de Luis Esquivia - Desarrollador y Programador Web">
+  <main class="z-20 px-4">
+    <SectionContainer class="py-28 pb-24">
+      <div class="flex flex-row gap-6">
+        <img
+          class="rounded-full size-24 mb-4"
+          src="https://avatars.githubusercontent.com/u/112635019?v=4"
+          alt="Luis Esquivia Foto"
+        />
+        <a
+          href="https://www.linkedin.com/in/luis-esquivia/"
+          aria-label="Ir al perfil de Linkedin"
+          target="_blank"
+          rel="noopener"
+          class="flex items-center"
+        >
+          <div class="flex justify-center items-center">
+            <Badge>Disponible para trabajar</Badge>
+          </div>
+        </a>
+      </div>
+
+      <h1
+        class="text-gray-800 dark:text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
+        Hola, Soy Luis Esquivia
+      </h1>
+      <h2 class="text-xl lg:text-2xl text-wrap mb-3 max-w-[700px]">
+        <span>+2 años de experiencia.</span>
+        <span class="text-cyan-600">Desarrollador Web</span>
+        <span class="text-sky-400">de Barranquilla, Colombia.</span>
+        <span class="opacity-80"
+          >Especializado en crear aplicaciones únicas.</span
+        >
+      </h2>
+      <nav class="flex gap-4 mt-8 flex-wrap">
+        <SocialPill href="https://www.linkedin.com/in/luis-esquivia/">
+          <LinkendInIcon class="size-4 md:size-6" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/Luis-Esquivia">
+          <GitHubIcon class="size-4 md:size-6" />
+          GitHub
+        </SocialPill>
+        <SocialPill href="mailto:luisdanielesq7@gmail.com">
+          <MailIcon class="size-4 md:size-6" />
+          luisdanielesq7@gmail.com
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+
+    <SectionContainer id="experiencia">
+      <h2 class="text-2xl font-semibold flex gap-x-3 items-center">
+        <BriefcaseIcon class="size-7" />
+        Experiencia laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="proyectos" class="mt-10">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+        <CodeIcon class="size-7" />
+        Proyectos
+      </h2>
+      <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="sobre-mi" class="mt-16">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
+      >
+        <ProfileCheck class="size-8" />
+        Sobre mí
+      </h2>
+      <AboutMe />
+    </SectionContainer>
+  </main>
+</Layout>

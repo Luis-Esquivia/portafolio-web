@@ -1,0 +1,29 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCIE = [
+  {
+    date: "20/01/2022 - 10/09/2023",
+    title: "Desarrollador Full-Stack",
+    company: "Fabrica-Tic | SENA",
+    description:
+      " Lideré sesiones de análisis de requerimientos con clientes, identificando y documentando sus necesidades específicas. Desarrollé un profundo entendimiento de cómo traducir estos requisitos en soluciones técnicas efectivas.",
+  },
+  {
+    date: "10/10/2023 - 14/06/2024",
+    title: "Desarrollador Front-End",
+    company: "Koombea",
+    description:
+      "Diseño y desarrollo de interfaces de usuario atractivas y funcionales. Implementación de prácticas avanzadas de SEO para mejorar la visibilidad en línea. Enfoque en la accesibilidad web para garantizar la inclusión de todos los usuarios. Optimización de la velocidad y el rendimiento de los sitios web para una experiencia de usuario excepcional. ",
+  },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
