@@ -12,6 +12,7 @@ import CodeIcon from "../components/icons/Code.astro";
 import Projects from "../components/Projects.astro";
 import ProfileCheck from "../components/icons/ProfileCheck.astro";
 import AboutMe from "../components/AboutMe.astro";
+import Download from "../components/icons/Download.astro"
 ---
 
 <Layout title="Porfolio de Luis Esquivia - Desarrollador y Programador Web">
@@ -24,14 +25,15 @@ import AboutMe from "../components/AboutMe.astro";
           alt="Luis Esquivia Foto"
         />
         <a
-          href="https://www.linkedin.com/in/luis-esquivia/"
+          href="../../public/cv/CV Luis Daniel Esquivia Hernandez.pdf"
+          download
           aria-label="Ir al perfil de Linkedin"
           target="_blank"
           rel="noopener"
           class="flex items-center"
         >
           <div class="flex justify-center items-center">
-            <Badge>Disponible para trabajar</Badge>
+            <Badge> <Download  class="size-4 me-2" fill="#fff"/> Descarga mi curriculum !</Badge>
           </div>
         </a>
       </div>
