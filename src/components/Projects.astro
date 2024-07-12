@@ -5,6 +5,8 @@ import Tailwind from "./icons/Tailwind.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
 import WordPress from "./icons/WordPress.astro"
+import Shopify from "./icons/Shopify.astro"
+import Liquid from "./icons/Liquid.astro"
 
 const TAGS = {
   NEXT: {
@@ -19,8 +21,18 @@ const TAGS = {
   },
   WORDPRESS: {
     name: "WordPress",
-    class: "dark:bg-white bg-[#AEB6BF] text-black",
+    class: "bg-[#003159] text-white",
     icon: WordPress,
+  },
+  SHOPIFY: {
+    name: "Shopify",
+    class: "bg-[#145A32] text-white",
+    icon: Shopify,
+  },
+  LIQUID: {
+    name: "Liquid",
+    class: "bg-[#003159] text-white",
+    icon: Liquid,
   }
 }
 const PROJECTS = [
@@ -30,7 +42,7 @@ const PROJECTS = [
       "E-Commerce utilizando NextJS, el framework de React diseñado para la producción. Este proyecto combina renderizado híbrido (estático y de servidor), compatibilidad con TypeScript, agrupación inteligente y pre-carga de rutas, brindando una experiencia de usuario fluida y eficiente. ¡Explora este proyecto y descubre cómo NextJS puede transformar el desarrollo web!",
     github: "https://github.com/Luis-Esquivia/teslo-shop",
     image: "/projects/teslo-shop.png",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    tags: [TAGS.NEXT, TAGS.TAILWIND]
   },
   {
     title: "Equipos VCR - Web page",
@@ -38,8 +50,16 @@ const PROJECTS = [
       "Página web en WordPress para Equipos VCR, un operador portuario. Este proyecto implicó la creación de una plataforma profesional y funcional, diseñada para mejorar la presencia en línea de la empresa y facilitar la interacción con sus clientes. ¡Descubre cómo WordPress puede potenciar la visibilidad y eficiencia de una empresa!",
     link: "https://www.equiposvcr.com/",
     image: "/projects/equipos-vcr.png",
-    tags: [TAGS.WORDPRESS],
+    tags: [TAGS.WORDPRESS]
   },
+  {
+    title: "Analytics - E-Commerce con shopify",
+    description: 
+      `E-Commerce potenciado por Shopify y Liquid. Utilizando la API de Shopify, este proyecto ofrece una experiencia de usuario fluida y personalizada. Desde la configuración del sitio hasta la integración de pagos y gestión de productos, "Analytics" representa mi capacidad para crear soluciones robustas y escalables en el entorno de eCommerce. ¡Explora cómo Shopify y Liquid pueden transformar tu visión de ventas en línea!`,
+    github: "https://github.com/Luis-Esquivia/analyticstheme-shopify",
+    image:"/projects/analytics.png",
+    tags:[TAGS.SHOPIFY, TAGS.LIQUID]
+  }
 ]
 ---
 
