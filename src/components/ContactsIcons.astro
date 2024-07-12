@@ -1,0 +1,62 @@
+---
+import Whatsapp from "./icons/Whatsapp.astro"
+import Mail from "./icons/Mail.astro"
+import LinkedIn from "./icons/LinkedIn.astro"
+import GitHub from "./icons/GitHub.astro"
+
+
+const ICONS = [
+  {
+    name: "Whatsapp",
+    link: "https://wa.me/+573023961683?text=¿Listo para llevar tu presencia en línea al siguiente nivel? Con mi experiencia en desarrollo web, podemos hacerlo posible. Escríbeme y conversemos.",
+    icon: Whatsapp,
+  },
+/*   {
+    name: "Mail",
+    link: "",
+    icon: Mail,
+  }, */
+  {
+    name: "LinkedIn",
+    link: "https://www.linkedin.com/in/luis-esquivia/",
+    icon: LinkedIn,
+  },
+  {
+    name: "GitHub",
+    link: "https://github.com/Luis-Esquivia",
+    icon: GitHub,
+  },
+  {
+    name: "CV",
+    link: "../../public/cv/CV Luis Daniel Esquivia Hernandez.pdf",
+    icon: "CV"
+  }
+]
+---
+<style>
+  .wrapper ul li:hover a .icon {
+    color: rgb(8 145 178 / var(--tw-text-opacity));
+    fill: rgb(8 145 178 / var(--tw-text-opacity));
+    text-shadow: 0 0 15px rgb(8 145 178 / var(--tw-text-opacity));
+  }
+</style>
+
+<div class="wrapper">
+  <ul class="list-none flex gap-3 items-center justify-center">
+    {
+      ICONS.map(({ name, link, icon: Icon }) => (
+        <li 
+          id={name} 
+          class="cursor-pointer rounded-full border-4 border-white py-3 px-3 text-center transition-all duration-500 ease-in-out hover:transition-all hover:duration-500 hover:ease-in-out hover:border-cyan-600">
+          <a href={link} download aria-label={name}>
+            {Icon === 'CV' ? (
+            <p class="icon size-5 transition-all duration-500 ease-in-out text-center font-bold">{name}</p>
+          ) : (
+          <Icon class="icon size-5 transition-all duration-500 ease-in-out" fill="#fff" />
+          )}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</div>
